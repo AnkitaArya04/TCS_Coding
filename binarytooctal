@@ -1,0 +1,33 @@
+import java.util.*;
+import java.util.Scanner;
+public class Solution{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        String binary=sc.nextine();
+        binaryToOctal(binary);
+    }
+    static int binaryToOctal(String binary){
+        int decimal=binaryToDecimal(binary);
+        int octal=decimalToOctal(decimal);
+        return octal;
+    }
+    static int binaryToDecimal(String binary){
+        int power=0;
+        int decimal=0;
+        for(int i=binary.length()-1;i>=0;i--){
+            char c=binary,charAt(i);
+            decimal+= ((int)c-(int)'0')* (int)Math.pow(2,power++);
+        }
+        return decimal;
+    }
+    static int decimalToOctal(int decimal){
+        String octal="";
+        int remainder=0;
+        while(decimal>0){
+            remainder=decimal%8;
+            octal=remainder+octal;
+            decimal=decimal/8;
+        }
+        return Integer.parseInt(octal);
+    }
+}
