@@ -1,0 +1,15 @@
+import java.util.Arrays;
+public class Solution{
+    public static void main(String[] args){
+        int arr[]={8,71,993,173,61};
+        int n=arr.length;
+        Arrays.sort(arr);
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]+"");
+        }
+        for(int i=n-1;i>=n/2;i--){
+            System.out.println(arr[i]+"");
+        }
+    }
+
+}
