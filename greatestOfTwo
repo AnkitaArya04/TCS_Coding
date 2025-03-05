@@ -1,0 +1,12 @@
+import java.util.*;
+public class Solution{
+    public static void main(String[] args){
+        double num1=1.23;
+        double num2=1.56;
+        if(num1<num2){
+            System.out.println("the greatest of two number is:"+ num2);
+        }else{
+            System.out.println("the greatest of two number is:"+ num1);
+        }
+    }
+}
