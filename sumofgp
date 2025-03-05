@@ -1,0 +1,17 @@
+import java.util.*;
+public class Solution{
+    public static double sumOfGP(double a,double r,double n){
+        int sum=0;
+        for(int i=0;i<n;i++){
+            sum=sum+a;
+            a=a*r;
+        }
+        return sum;
+    }
+    public static void main(String[] args){
+        double a=5;
+        double r=1.5;
+        int n=5;
+        System.out.println(sumOfGP(a,r,n));
+    }
+}
