@@ -1,0 +1,11 @@
+import java.util.*;
+public class Solution{
+    public static void areaOfCircle(int r){
+        double ans=3.14*r*r;
+        System.out.println("area of circle"+ans);
+    }
+    public static void main(String args[]){
+        int n=5;
+        areaOfCircle(n);
+    }
+}
