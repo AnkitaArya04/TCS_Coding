@@ -1,0 +1,28 @@
+import java.util.*;
+public class main{
+    public int factorial(int n){
+        int fact=1;
+        for(int i=1;i<=n;i++){
+            fact=fact*i;
+        }
+        return fact;
+    }
+    public int strong_num(int num){
+        int sum=0;
+        while(num>0){
+            int digit=num%10;
+            sum=sum+factorial(digit);
+            num=num/10;
+        }
+        return num;
+    }
+    public static void main(String[] args){
+        int num=145;
+        int ans=strong_num(num);
+        if(ans==num || num!=0){
+            System.out.println("yes");
+        }else{
+            System.out.println("no");
+        }
+    }
+}
