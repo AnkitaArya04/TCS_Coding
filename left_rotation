@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Solution{
+    public void reverse(int[] num,int start,int end){
+        while(start<end){
+            int temp=num[start];
+            num[start]=num[end];
+            num[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    public void rotateLeftUsingReverse(int[] arr,int k){
+        k=k%arr.length;
+        reverse(arr,0,arr.length-1);
+        reverse(arr,0,arr.length-k-1);
+        reverse(arr,arr.length-k,arr.length-1);
+    }
+}
