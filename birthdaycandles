@@ -1,0 +1,19 @@
+import java.util.List;
+import java.util.*;
+
+public class Solution{
+    public static int birthdayCakeCandles(List<Integer> candles){
+        int maximum=Integer.MIN_VALUE;
+        for(Integer candle:candles){
+            if(candle>=maximum){
+                maximum=candle;
+            }
+        }
+        int result=0;
+        for(Integer candle:candles){
+            if(candle==maximum)
+            result++;
+        }
+        return result;
+    }
+}
