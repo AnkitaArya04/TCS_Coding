@@ -1,0 +1,13 @@
+import java.util.*;
+public class Solution{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String s1=sc.next();
+        String s2=sc.next();
+        char[] s1CharArray=s1.toCharArray();
+        char[] s2CharArray=s2.toCharArray();
+        Arrays.sort(s1CharArray);
+        Arrays.sort(s2CharArray);
+        System.out.println(Arrays.equals(s1CharArray,s2CharArray));
+    }
+}
