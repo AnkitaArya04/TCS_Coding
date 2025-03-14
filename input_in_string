@@ -1,0 +1,48 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Solution{
+    public static ArrayList<String> inputArrayFormat(){
+        ArrayList<String> arr=new ArrayList<>();
+        Scanner sc=new Scanner(System.in);
+        String input=sc.nextLine();
+        for(char c:input.toCharArray()){
+            if(Character.isLetter(c)){
+                arr.add(Character.toString(c));
+            }
+        }
+        return arr;
+    }
+    public static ArrayList<String> inputSpaceSeparated(){
+        ArrayList<String> arr=new ArrayList<>();
+        Scanner sc=new Scanner(System.in);
+        String input=sc.nextLine();
+        Scanner ss=new Scanner(input);
+        while(ss.hasNext()){
+            arr.add(ss.next());
+        }
+        public static ArrayList<String> inputArraySizeNotGiven(){
+            ArrayList<String> arr=new ArrayList<>();
+            Scanner sc=new Scanner(System.in);
+            System.out.println("enter any element");
+            while(true){
+                String element=sc.nextLine().trim();
+                if(element.isEmpty()){
+                    break;
+                }
+                arr.add(element);
+            }
+            return arr;
+        }
+
+    }
+    public static void main(String[] args){
+        System.out.println("Case 1:['A','B','C','D']");
+        System.out.println(inputArrayFormat());
+
+        System.out.println("case 2:[ A B C D]");
+        System.out.println(inputSpaceSeparated());
+
+        System.out.println("case with size not given");
+        System.out.println(inputArraySizeNotGiven());
+    }
+}
